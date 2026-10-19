@@ -1,0 +1,68 @@
+Version control
+--------------------
+
+-> When working with digital files whether it  is a word file are a programming file
+you probably dont finish all your work
+-> In this case the software you use to mmanage and track chnages in these files is your version control
+-> you could create your own version control system such as using multiple files
+-> Alternatively you could decide just to keep updating the same file over and over again
+-> But what happens if you want to go back to a historical version perhaps because of
+a bug in your new version
+-> what if you want to work with others on the same code
+-> Clearly we need a more robust system that can allow us to work on the same file
+and retain information about previous version
+-> A version control system allows us to track changes undo changes, compare version
+work with others
+-> Git itself is one example of a vcs and while there areothers git is the most popular vcs
+-> you can use git completely free in local and use it to tack chnages on your local files
+-> If you want to host your code on the internet it is easy to use a hosting service like github
+-> Github integrates with git and allows you to have version of your code
+on the internet for you and others to access, update and changes from any machine
+-> Github is not the same thing as git
+-> Git open source vcs
+-> Github that operates a service for hosting files on the internet that are managed using git
+-> The main place we track changes and manage our files that are using git is called a repository
+
+Git project flow
+----------------
+
+Initial project
+		|
+	Add code
+		|
+	Add code (main)
+		|  \
+		|   Add code (branch)
+		|        |
+		|    Branch code
+		|        |
+		+---- Merged code
+
+-> How can we create a git repository
+-> git init  -  This command initializes a got repository on your local machine
+-> git status  -  This command will report back the status f ypur git repository
+-> After creating a repository with git init you will create a hidden git file
+-> The git file is a hidden file that manages the versioning of the files inside the git repository
+-> After creating a git repository all the folders or directions inside the top level git repository will
+also be part of that repository meaning all the changes are tracked
+-> we can create a new repository
+-> Then we can git clone this repository to our local machine
+-> we will need to set up some tokens in order to clone private repository
+-> git clone https url  -  THis command will clone the repository to our local machine
+
+Private repository and tokens
+----------------------------------
+-> we can clone public repositories with the git clone command and then https url for the public repository
+-> How to clone private repository to our local machine
+comamnd line
+------------------
+-> create personal access tokens PAT on github
+-> when using git clone command reference the PAT
+Github desktop tool
+-------------------------
+-> open the github desktop tool
+-> Login with github username and password
+-> clone repository
+clone syntax with PAT
+git clone https://token@github.com
+
