@@ -91,3 +91,17 @@ staging area and repository
 -> The git log command will show a list of all the commits made to a repository including the hash, message
 and metadata
 -> It is a history of repository
+-> git remote -v  -  we can check for remote branches with this command
+-> If you run this command on a cloned repository you will view the url of the remote branch like github url
+-> If there is no connection to a remote branch then you wont see a url
+-> After we have created a repository local we need to create the repository on github
+-> when you create the repository on github you will see the instructions push an existing repository from the command line
+-> we tell git we want to add a remote branch using the git remote command syntax
+git remote add name https://url.git
+-> By convention we call this remote branch the origin branch
+git remote add origin https://url.git
+-> Then replace the git url with the git url from the repository you created
+-> once we have connected to our remote branch on hithub we can push our code to the remote branch
+-> we will tell git to push to the remote or master branch called origin with the command
+git push -u origin main or master
+
