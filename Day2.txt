@@ -87,3 +87,7 @@ staging area and repository
                     │                                     │
                     └────────── git pull ─────────────────┘
 
+-> So before we move to git fetch and git pull let us quicklyshow you how to use git log
+-> The git log command will show a list of all the commits made to a repository including the hash, message
+and metadata
+-> It is a history of repository
