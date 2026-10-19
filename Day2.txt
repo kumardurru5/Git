@@ -1,0 +1,89 @@
+-> we are using the term repository for where we are developing our code but we want to break this down into working directoey
+staging area and repository
+-> git add  -  change code in a repository
+-> git commit  -  committing these changes
+-> git push and git pull  -  push or pull changes
+-> git status, git log, git diff  -  check status, logs and changes
+
+[Initial project]
+       |
+   [Add code]  <------------------+
+       |                          |
+       +--------------------------+
+       |
+       +--> we can go back to a precious commit
+            A git commit does not just have a saving changes in a single file
+            It can constitute specific changes across an entire working directory
+
+
+[Initial project]
+       |
+   [Add code]  <--- we can think of these as commits where
+       |             we have informed git about specific
+   [Add code]  <--- changes to files
+
+
+[git init]  ---> If you run git init within a specific directory to
+                  create your repository
+
+
+                                   
+
+   ┌──────────────────┐       ┌──────────────────┐       ┌──────────────────────┐
+   │ project          │       │ git add          │       │ git commit           │
+   │                  │       │ program.py       │       │ -m "message"         │
+   │ program.py       │──────>│                  │──────>│                      │
+   │ index.html       │       │ program.py       │       │ program.py           │
+   │ style.css        │       │ index.html       │       │ index.html           │
+   │                  │       │ style.css        │       │ style.css            │
+   └──────────────────┘       └──────────────────┘       └──────────────────────┘
+           │                          │                            │
+           ▼                          ▼                            ▼
+     Working Directory           Staging Area                 Repository
+
+
+-> I have a question here.
+-> Is this part of repository while it is inworking directory
+-> It looks like it's part of the repository, but we haven't told Git that you want to commit these files to the repository
+-> If you try to push your repository from your local machine to GitHub without running commands like git add or git commit, then nothing would be changed on GitHub
+-> So how do we tell Git that I want to commit my changes that I have done in my working directory to the repository
+
+-> This is where we introduce the conceptof a staging area
+-> What we do is the changes that we perform in the working directory, we add them to the staging area
+
+-> Now we have this in the staging area, we can commit it so that it's part of the repository
+
+
+      LOCAL REPOSITORY                        GITHUB
+
+    ┌────────────────────┐              ┌──────────────────┐
+    │                    │              │                  │
+    │ program.py         │              │                  │
+    │                    │              │      GitHub      │
+    │ index.html         │              │                  │
+    │                    │              │                  │
+    │ style.css          │              └──────────────────┘
+    │                    │                       ▲
+    └────────────────────┘                       │
+              │                                  │
+              └──────── git push ────────────────┘
+
+-> Now they have been committed as part of the repository. You can push from the repository to GitHub
+-> So because something is in your working directory doesn't technically mean it's in your repository
+
+
+          WORKING DIRECTORY                       REPOSITORY
+
+       ┌──────────────────────┐              ┌──────────────────────┐
+       │                      │              │                      │
+       │    ┌───────────┐     │              │ program.py           │
+       │    │ project   │     │              │                      │
+       │    └───────────┘     │              │ index.html           │
+       │                      │              │                      │
+       │    program.py        │              │ style.css            │
+       │                      │              │                      │
+       └──────────────────────┘              └──────────────────────┘
+                    ▲                                     │
+                    │                                     │
+                    └────────── git pull ─────────────────┘
+
