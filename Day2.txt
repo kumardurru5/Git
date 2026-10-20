@@ -105,3 +105,34 @@ git remote add origin https://url.git
 -> we will tell git to push to the remote or master branch called origin with the command
 git push -u origin main or master
 
+-> There are two options of getting repository changes from a remote branch like the remote branch
+on github
+git pull
+git fetch
+
+
+                  git add             git commit               git push
+                ──────────>         ──────────>              ──────────>
+
+  ┌──────────────────┐   ┌──────────────────┐   ┌──────────────────┐   ┌──────────────────┐
+  │                  │   │                  │   │                  │   │                  │
+  │     Working      │   │     Staging      │   │      Local       │   │      Remote      │
+  │    Directory     │   │       Area       │   │    Repository    │   │    Repository    │
+  │                  │   │                  │   │                  │   │     (GitHub)     │
+  └──────────────────┘   └──────────────────┘   └──────────────────┘   └──────────────────┘
+                                                       ▲                        │
+                                                       │                        │
+                                                       └────── git fetch ───────┘
+
+             ▲                                                                  │
+             │                                                                  │
+             └──────────────────── git pull ─────────────────────────────────────┘
+
+-> If we use git fetch it will download changes from the github remote repository but you will
+not see those changes be part of the files you have in the working directory
+-> Fetch allows you to grab additional work done on the remote master branch without need to merge it
+in your working directory file
+-> git fetch  -  we use to fetch code from remote repository
+-> git fetch <remote> <branch>
+-> git fetch origin <branch>
+
