@@ -104,10 +104,6 @@ git remote add origin https://url.git
 -> once we have connected to our remote branch on hithub we can push our code to the remote branch
 -> we will tell git to push to the remote or master branch called origin with the command
 git push -u origin main or master
--> If we use git pull when you want to get changes from the remote branch and merge them into your
-current branch
--> This means you will update the files in your working directory to match up and merge with the remote branch
-
 
 -> There are two options of getting repository changes from a remote branch like the remote branch
 on github
@@ -139,4 +135,8 @@ in your working directory file
 -> git fetch  -  we use to fetch code from remote repository
 -> git fetch <remote> <branch>
 -> git fetch origin <branch>
+-> If we use git pull when you want to get changes from the remote branch and merge them into your
+current branch
+-> This means you will update the files in your working directory to match up and merge with the remote branch
+
 
